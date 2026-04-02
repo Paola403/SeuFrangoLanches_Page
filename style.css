@@ -789,6 +789,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 .btn-insta { background: linear-gradient(135deg, #E1306C, #833AB4, #FD1D1D); color: #fff; }
 .btn-tel   { background: var(--bg3); color: var(--white); border: 2px solid var(--border); }
 .btn-tel:hover { border-color: var(--yellow); color: var(--yellow); }
+.btn-ifood { background: linear-gradient(135deg, #EA1D2C, #b91521); color: #fff; box-shadow: 0 6px 22px rgba(234, 29, 44, .35);}
 
 /* ============================================================
    FOOTER

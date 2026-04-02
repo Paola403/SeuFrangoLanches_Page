@@ -45,15 +45,9 @@ function checkBusinessHours() {
     const hoursLeft   = Math.floor(minutesLeft / 60);
     const minsLeft    = minutesLeft % 60;
 
-    let timeMsg = '';
-    if (hoursLeft > 0) {
-      timeMsg = `fecha em ${hoursLeft}h${minsLeft > 0 ? minsLeft + 'min' : ''}`;
-    } else {
-      timeMsg = `fecha em ${minsLeft}min`;
-    }
 
     badge.classList.add('is-open');
-    text.textContent = `🟢 Aberto agora  •  ${timeMsg}`;
+    text.textContent = `Aberto agora  •  Entraga Rápida`;
   } else {
     // Fechado – calcular próxima abertura
     badge.classList.add('is-closed');
@@ -74,14 +68,14 @@ function checkBusinessHours() {
       const hU = Math.floor(minsUntil / 60);
       const mU = minsUntil % 60;
       if (minsUntil > 60) {
-        text.textContent = `🔴 Fechado  •  Abre hoje às 18h30`;
+        text.textContent = `Fechado  •  Abre hoje às 18h30`;
       } else if (hU > 0) {
         text.textContent = `🔴 Fechado  •  Abre em ${hU}h${mU > 0 ? mU + 'min' : ''}`;
       } else {
         text.textContent = `🔴 Fechado  •  Abre em ${mU}min`;
       }
     } else if (daysUntilOpen === 1) {
-      text.textContent = `🔴 Fechado  •  Abre amanhã às 18h30`;
+      text.textContent = `Fechado  •  Abre amanhã às 18h30`;
     } else {
       const nextDayName = DAY_NAMES[(day + daysUntilOpen) % 7];
       text.textContent  = `🔴 Fechado  •  Abre ${nextDayName} às 18h30`;
