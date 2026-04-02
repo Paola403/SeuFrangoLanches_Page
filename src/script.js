@@ -47,7 +47,7 @@ function checkBusinessHours() {
 
 
     badge.classList.add('is-open');
-    text.textContent = `Aberto agora  •  Entraga Rápida`;
+    text.textContent = `Aberto agora  •  Entrega Rápida`;
   } else {
     // Fechado – calcular próxima abertura
     badge.classList.add('is-closed');
@@ -108,21 +108,37 @@ window.addEventListener('scroll', () => {
    NAV: active link highlight
    ───────────────────────────────────────── */
 const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-        });
-      }
+window.addEventListener('scroll', () => {
+  let currentSection = null;
+  let minDistance = window.innerHeight;
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top);
+
+    if (rect.top <= 150 && distance < minDistance) {
+      minDistance = distance;
+      currentSection = section;
+    }
+  });
+
+  if (currentSection) {
+    const id = currentSection.getAttribute('id');
+
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
     });
-  },
-  { threshold: 0.35 }
-);
+  }
+});
+
+if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#contato');
+  });
+}
+
 sections.forEach(sec => sectionObserver.observe(sec));
 
 /* ─────────────────────────────────────────
@@ -223,7 +239,7 @@ document.querySelectorAll('.products-scroll').forEach(row => {
   window.addEventListener('mousemove', e => {
     if (!isDragging) return;
     const x    = e.pageX - row.offsetLeft;
-    const walk = (x - startX) * 1.5;
+    const walk = (x - startX) * 1.1;
     if (Math.abs(walk) > 4) hasDragged = true;
     row.scrollLeft = scrollLeft - walk;
   });

@@ -6,7 +6,8 @@
 <title>Seu Frango Lanches – O melhor lanche da cidade</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="src/style.css">
+<link rel="icon" type="icone" href="img/icone/icon.ico">
 </head>
 <body>
 
@@ -15,10 +16,12 @@
   <div class="nav-logo">Seu <span>Frango</span> Lanches</div>
 
   <ul class="nav-links">
+    <li><a href="#hero">Início</a></li>
     <li><a href="#cardapio">Cardápio</a></li>
     <li><a href="#diferenciais">Sobre</a></li>
     <li><a href="#avaliacoes">Avaliações</a></li>
     <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#contato">Contato</a></li>
     <li>
       <a href="https://wa.me/5519989786756?text=Oi!%20Quero%20fazer%20um%20pedido" target="_blank" class="nav-cta">
         Pedir agora
@@ -34,10 +37,12 @@
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
+    <li><a href="#hero"    class="mob-link">Início</a></li>
     <li><a href="#cardapio"    class="mob-link">Cardápio</a></li>
     <li><a href="#diferenciais" class="mob-link">Sobre</a></li>
     <li><a href="#avaliacoes"  class="mob-link">Avaliações</a></li>
     <li><a href="#localizacao" class="mob-link">Localização</a></li>
+    <li><a href="#contato" class="mob-link">Contato</a></li>
     <li>
       <a href="https://wa.me/5519989786756?text=Oi!%20Quero%20fazer%20um%20pedido"
          target="_blank" class="mob-link mob-cta">Pedir agora</a>
@@ -111,9 +116,7 @@
 
       <div class="product-card fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: salve como dog-simples.jpg e substitua o <div class="ph"> por:
-               <img src="dog-simples.jpg" alt="Dog Simples" class="product-img"> -->
-          <div class="ph"><span>🌭</span><em>dog-simples.jpg</em></div>
+          <img src="img/hotdog/dog_simples.jpg" alt="Dog Simples" class="product-img">
           <div class="product-badge badge-classic">Clássico</div>
         </div>
         <div class="product-info">
@@ -125,7 +128,7 @@
       <div class="product-card fade-in">
         <div class="product-img-wrap">
           <!-- FOTO: dog-especial.jpg -->
-          <div class="ph"><span>🌭</span><em>dog-especial.jpg</em></div>
+          <img src="img/hotdog/dog_especial.jpg" alt="Dog Especial" class="product-img">
           <div class="product-badge badge-special">Especial</div>
         </div>
         <div class="product-info">
@@ -136,8 +139,7 @@
 
       <div class="product-card fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: dog-frango.jpg -->
-          <div class="ph"><span>🌭</span><em>dog-frango.jpg</em></div>
+          <img src="img/hotdog/dog_frango.jpg" alt="Dog Frango" class="product-img">
           <div class="product-badge badge-chicken">Com Frango</div>
         </div>
         <div class="product-info">
@@ -148,8 +150,7 @@
 
       <div class="product-card fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: dog-galinhao.jpg -->
-          <div class="ph"><span>🌭</span><em>dog-galinhao.jpg</em></div>
+          <img src="img/hotdog/galinhao.jpg" alt="Galinhão" class="product-img">
           <div class="product-badge badge-top">⭐ Top</div>
         </div>
         <div class="product-info">
@@ -166,8 +167,7 @@
 
       <div class="product-card fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: hamburguer.jpg -->
-          <div class="ph"><span>🍔</span><em>hamburguer.jpg</em></div>
+          <img src="img/hamburguer/hamburguer.jpg" alt="Hambúrguer" class="product-img">
         </div>
         <div class="product-info">
           <div class="product-name">Hambúrguer</div>
@@ -177,8 +177,7 @@
 
       <div class="product-card fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: hamburguer-gourmet.jpg -->
-          <div class="ph"><span>🍔</span><em>hamburguer-gourmet.jpg</em></div>
+          <img src="img/hamburguer/hamburguer_gourmet.jpg" alt="Hambúrguer Gourmet" class="product-img">
           <div class="product-badge badge-new">✨ Novidade!</div>
         </div>
         <div class="product-info">
@@ -195,8 +194,7 @@
 
       <div class="product-card product-card-sm fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: coca-2l.jpg -->
-          <div class="ph"><span>🥤</span><em>coca-2l.jpg</em></div>
+          <img src="img/refrigerantes/coca.jpg" alt="Coca" class="product-img">
         </div>
         <div class="product-info">
           <div class="product-name">Coca-Cola 2L</div>
@@ -206,8 +204,7 @@
 
       <div class="product-card product-card-sm fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: cruzeiro.jpg -->
-          <div class="ph"><span>🥤</span><em>cruzeiro.jpg</em></div>
+          <img src="img/refrigerantes/cruzeiro.jpg" alt="Cruzeiro" class="product-img">
         </div>
         <div class="product-info">
           <div class="product-name">Cruzeiro</div>
@@ -217,8 +214,7 @@
 
       <div class="product-card product-card-sm fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: galeguinha.jpg -->
-          <div class="ph"><span>🥤</span><em>galeguinha.jpg</em></div>
+          <img src="img/refrigerantes/galeguinha.jpg" alt="Galeguinha" class="product-img">
         </div>
         <div class="product-info">
           <div class="product-name">Galeguinha</div>
@@ -228,26 +224,13 @@
 
       <div class="product-card product-card-sm fade-in">
         <div class="product-img-wrap">
-          <!-- FOTO: coca-lata.jpg -->
-          <div class="ph"><span>🥤</span><em>coca-lata.jpg</em></div>
+          <img src="img/refrigerantes/coca_lata.jpg" alt="Coca Lata" class="product-img">
         </div>
         <div class="product-info">
           <div class="product-name">Coca (Lata)</div>
           <div class="product-desc">Lata gelada 350ml</div>
         </div>
       </div>
-
-      <div class="product-card product-card-sm fade-in">
-        <div class="product-img-wrap">
-          <!-- FOTO: guarana.jpg -->
-          <div class="ph"><span>🥤</span><em>guarana.jpg</em></div>
-        </div>
-        <div class="product-info">
-          <div class="product-name">Guaraná Antártica</div>
-          <div class="product-desc">Lata gelada 350ml</div>
-        </div>
-      </div>
-
     </div>
 
     <div class="cardapio-cta fade-in">
@@ -454,6 +437,6 @@
   </svg>
 </a>
 
-<script src="script.js"></script>
+<script src="src/script.js"></script>
 </body>
 </html>

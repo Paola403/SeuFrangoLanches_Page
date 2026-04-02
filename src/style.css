@@ -124,6 +124,9 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   justify-content: center;   /* ← centraliza */
   align-items: center;
   flex-wrap: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-48%);
 }
 .nav-links a {
   color: var(--white);
@@ -271,10 +274,11 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   align-items: center;
   padding: 110px 24px 70px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 .hero-bg {
   position: absolute; inset: 0;
+  overflow: hidden;
   background:
     radial-gradient(ellipse 90% 70% at 65% 50%, rgba(232,34,18,.22) 0%, transparent 65%),
     radial-gradient(ellipse 55% 55% at 10% 85%, rgba(255,208,0,.13) 0%, transparent 55%),
@@ -349,7 +353,8 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: relative;  
+  padding: 10px;
 }
 .hero-ring {
   position: absolute;
@@ -357,13 +362,13 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   pointer-events: none;
 }
 .hero-ring-1 {
-  width: 115%; height: 115%;
+  width: 130%; height: 130%;
   background: radial-gradient(circle, rgba(255,208,0,.14) 0%, rgba(232,34,18,.08) 50%, transparent 72%);
   animation: pulse-ring 3.5s ease-in-out infinite;
   filter: blur(20px);
 }
 .hero-ring-2 {
-  width: 96%; height: 96%;
+  width: 110%; height: 110%;
   border: 2px dashed rgba(255,208,0,.22);
   animation: spin-slow 22s linear infinite;
 }
@@ -371,9 +376,10 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 @keyframes spin-slow  { to { transform: rotate(360deg); } }
 
 .hero-logo-img {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 50%;
+  width: auto;
+  max-width: 450px; /* um pouco menor */
+  height: auto;
+  object-fit: contain;
   animation: float 4.5s ease-in-out infinite;
   position: relative;
   z-index: 1;
@@ -446,7 +452,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 8px 4px 20px;
+  padding: 20px 10px 30px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;          /* esconde scrollbar no Firefox */
@@ -764,7 +770,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 /* ============================================================
    CONTATO
    ============================================================ */
-#contato { background: var(--bg2); }
+#contato { background: var(--bg2); padding:140px;}
 .contato-inner { text-align: center; }
 .contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
 
@@ -796,12 +802,12 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
    ============================================================ */
 footer {
   background: #080808;
-  padding: 36px 24px;
+  padding: 120px;
   text-align: center;
   border-top: 2px solid rgba(255,208,0,.12);
 }
 .footer-inner { max-width: 600px; margin: 0 auto; }
-.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: var(--yellow); margin-bottom: 14px; letter-spacing: 1px; }
+.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 3.0rem; color: var(--yellow); margin-bottom: 14px; letter-spacing: 1px; }
 .footer-logo span { color: var(--red); }
 .footer-social { display: flex; justify-content: center; gap: 14px; margin-bottom: 16px; }
 .footer-social a {
@@ -817,7 +823,7 @@ footer {
   transition: color .2s, border-color .2s, transform .2s;
 }
 .footer-social a:hover { color: var(--yellow); border-color: rgba(255,208,0,.4); transform: scale(1.15); }
-.footer-text { font-size: .8rem; color: #555; line-height: 1.7; }
+.footer-text { font-size: .9rem; color: #555; line-height: 1.7; }
 
 /* ============================================================
    WHATSAPP FLUTUANTE
@@ -851,7 +857,7 @@ footer {
    ============================================================ */
 @media (max-width: 900px) {
   .location-grid { grid-template-columns: 1fr; }
-  .hero-logo-img { max-width: 380px; }
+  .hero-logo-img { max-width: 500px; }
 }
 @media (max-width: 768px) {
   section { padding: 60px 20px; }
