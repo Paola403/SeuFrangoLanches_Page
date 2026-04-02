@@ -139,7 +139,6 @@ if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
   });
 }
 
-sections.forEach(sec => sectionObserver.observe(sec));
 
 /* ─────────────────────────────────────────
    MOBILE MENU
