@@ -40,10 +40,6 @@ body {
   color: var(--white);
   overflow-x: hidden;
 }
-/* Wrapper to clip horizontal overflow without breaking fixed positioning */
-body > *:not(nav):not(.mobile-menu):not(.wpp-float) {
-  max-width: 100vw;
-}
 ::-webkit-scrollbar { width: 6px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
@@ -107,7 +103,6 @@ nav {
   backdrop-filter: blur(16px);
   border-bottom: 2px solid rgba(232,34,18,.18);
   transition: height .3s, border-color .3s;
-  overflow: hidden;
 }
 nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 
@@ -131,7 +126,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   flex-wrap: nowrap;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-48%);
 }
 .nav-links a {
   color: var(--white);
@@ -212,7 +207,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 }
 
 @media (max-width: 780px) {
-  nav { grid-template-columns: auto auto; overflow: hidden; } /* logo | toggle */
+  nav { grid-template-columns: auto auto; } /* logo | toggle */
   .nav-links { display: none; position: static; transform: none; }
   .nav-toggle { display: flex; }
   .mobile-menu { display: block; }
@@ -279,7 +274,7 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
   align-items: center;
   padding: 110px 24px 70px;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
@@ -807,6 +802,10 @@ nav.scrolled { height: 56px; border-bottom-color: rgba(255,208,0,.25); }
 .btn-insta { background: linear-gradient(135deg, #E1306C, #833AB4, #FD1D1D); color: #fff; }
 .btn-tel   { background: var(--bg3); color: var(--white); border: 2px solid var(--border); }
 .btn-tel:hover { border-color: var(--yellow); color: var(--yellow); }
+
+@media (max-width: 480px) {
+  .btn-tel { border-color: rgba(255,255,255,.2); }
+}
 .btn-ifood { background: linear-gradient(135deg, #EA1D2C, #b91521); color: #fff; box-shadow: 0 6px 22px rgba(234, 29, 44, .35);}
 
 /* ============================================================
